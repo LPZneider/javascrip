@@ -9,6 +9,7 @@ export default class espacio {
          nombre,
          apellido,
          numero
+         
         console.log(`hola ${nombre} ${apellido} tu numero es ${numero}`)
     }
         saludar(){
