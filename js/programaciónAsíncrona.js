@@ -1,5 +1,4 @@
-
-// Temporizadores (setTimeout & setInterval) 
+// Temporizadores (setTimeout & setInterval)
 /*
  console.log("inicio")
  setTimeout(()=>{
@@ -24,8 +23,8 @@ clearTimeout(temporizador)
 }, 5000)
 
 clearInterval(temporizador)  */
- 
-// Asincronía y el Event Loop 
+
+// Asincronía y el Event Loop
 /*      Procesamiento Single thread y Multi thread.
      Operaciones de CPU y Operaciones de I / O.
      Operaciones Concurrentes y Paralelas.
@@ -83,3 +82,28 @@ clearInterval(temporizador)  */
     */
 
 // callbacks
+/* 
+function cuadradoCallback(value, callback) {
+  setTimeout(() => {
+    callback(value, value * value);
+  }, 0 | (Math.random() * 1000));
+}
+cuadradoCallback(5, (value, result) => {
+  console.log("inicia callback");
+  console.log(`callback: ${value}, ${result}`);
+  cuadradoCallback(10, (value, result) => {
+    console.log(`callback: ${value}, ${result}`);
+    cuadradoCallback(15, (value, result) => {
+      console.log(`callback: ${value}, ${result}`);
+      cuadradoCallback(20, (value, result) => {
+        console.log(`callback: ${value}, ${result}`);
+        cuadradoCallback(25, (value, result) => {
+          console.log(`callback: ${value}, ${result}`);
+          cuadradoCallback(30, (value, result) => {
+            console.log(`callback: ${value}, ${result}`);
+          });
+        });
+      });
+    });
+  });
+}); */
