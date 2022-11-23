@@ -37,6 +37,7 @@ console.log(Object.getOwnPropertySymbols(persona));
  */
 
 // Sets
+/* 
 let set = new Set([1,2,33,33,4,5,6,7]);
 console.log(set.size)
 let set2 = new Set()
@@ -55,5 +56,41 @@ console.log(set.has(1))
 console.log("***************INICIO*********************")
 console.log(set.forEach( item =>console.log(item)))
 
+ */
 
+// Maps
+/* let mapa = new Map();
+mapa.set("nombre","neider");
+mapa.set("Apellido","lopez");
+mapa.set("Edad",18);
+console.log(mapa)
+console.log(mapa.size);
+console.log(mapa.has("correo"));
+console.log(mapa.has("Apellido"));
+console.log(mapa.get("Apellido"));
+mapa.set("nombre","Neider López")
+console.log(mapa);
+mapa.delete("Apellido")
+console.log(mapa);
+mapa.set(19,"aaaa")
+mapa.set(false,"amigos")
+mapa.set({},{ })
 
+for (const [key, value] of mapa) {
+  console.log(`Llave: ${key}, \n Valor: ${value} `)
+}
+
+const mapa2 = new Map([
+  ["nombre","mara"],
+  ["animal","perro"]
+])
+console.log(mapa2)
+
+const llavesMapa2 = [... mapa2.keys()]
+const valoresMapa2 = [... mapa2.values()]
+
+console.log(llavesMapa2)
+console.log(valoresMapa2)
+ */
+
+// 
