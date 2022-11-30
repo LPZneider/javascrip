@@ -155,5 +155,128 @@ setTimeout(()=> {
 
  */
 
-// terables & Iterators
+// Iterables & Iterators
+/* 
+// const Iterable = [1,2,3,4,5,6];
+const Iterablex = "hola mumdo";
+const iterador = Iterable[Symbol.iterator]();
 
+console.log(Iterable)
+console.log(iterador)
+
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+
+let next = iterador.next();
+while (!next.done){
+  console.log(next.value);
+  next = iterador.next();
+} */
+
+// Generators
+/* 
+function* Iterable (){
+  yield "hola 1";
+  console.log("hola consola");
+  yield "hola 2"
+  console.log("seguimos")
+  yield "hola 3"
+  yield "hola 4"
+}
+
+let iterador = Iterable();
+//  console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next()) 
+
+for (const y of iterador) {
+  console.log(y)
+}
+
+const arr =[...Iterable()];
+console.log(arr)
+
+
+function cuadrado (valor){
+  setTimeout(()=>{ 
+    return console.log({ valor,result: valor * valor
+    })} ,Math.random() * 1000);
+  }
+  function* generador (){
+    console.log("inicia generador");
+    yield cuadrado(0)
+    yield cuadrado(1)
+    yield cuadrado(2)
+    yield cuadrado(3)
+    yield cuadrado(4)
+    yield cuadrado(5)
+    yield cuadrado(6)
+    console.log("termina generador");
+  }
+  
+  let gen = generador();
+  
+  for (let y of gen) {
+    console.log(y)
+  }
+  */
+  
+// Proxies 
+/* 
+//  va recibir un objeto literal va a generar una copia y va a permitir realizare cietas operaciones como validacion de propiedades de tipo de dato dentro de la copia que se esta creando del objeto original vas a tener un medio de vinculacion entre el objeto en que te basas y la nueva instancia que has generado todo eso se va a administar a través de un objeto especial que recibe el proxie  que se conoce como handler o manejador 
+
+const persona = {
+  nombre: "",
+  apellido: "",
+  edad: 0
+}
+
+const manejador = {
+  set(obj,prop,valor){
+    if(Object.keys(obj).indexOf(prop) === -1){
+      return console.error(`la propiedad "${prop}" no existe en el obbjeto persona`)
+    }
+    if((prop === 'nombre'|| prop ==='apellido')&& !(/^[A-Za-z\s]+$/g.test(valor))){
+      return console.error(`la propiedad ${prop} solo acepta letras y espacios en blanco`)
+    } 
+    if((prop === 'edad') && (typeof valor !== 'number' || Math.sign(valor) === -1 || valor === 0)){
+      return console.error(`la propiedad ${prop} solo acepta numeros que no sean negativos o iguales a 0 `)
+    }
+  
+
+
+    obj[prop] = valor
+  }
+}
+
+let neider = new Proxy(persona,manejador)
+neider.nombre = "neider";
+neider.apellido = "lopez";
+neider.edad = 8;
+// neider.email = 18;
+
+console.log(neider)
+ */
+
+// Propiedades Dinámicas de los Objetos
+/* 
+// genera propiedades dinamicas que se van creando deacuerdo a ciertas especificaones 
+let aleatorio = Math.round(Math.random()*100 +5)
+const objDinamicas ={
+  propiedad: "valor",
+  [`id_${aleatorio}`]: "valor aleatorio"
+}
+console.log(objDinamicas)
+
+const arr = ["neider","alexis","mara"]
+
+arr.forEach((obj, index) => objDinamicas[`id_${index}`] = obj)
+console.log(objDinamicas)
+ */
