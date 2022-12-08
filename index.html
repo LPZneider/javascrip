@@ -1,14 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1> JavaScrip</h1>
-    <script src="js/nuevos-tipos.js"></script>
-</body>
-</html>
+    <style>
+      :root {
+        --yellow-color: #f7df1e;
+        --dark-color: #222;
+      }
 
+      .cards {
+        border: thin solid var(--dark-color);
+        padding: 1rem;
+      }
+
+      .card {
+        display: inline-block;
+        background-color: var(--dark-color);
+        color: var(--yellow-color);
+      }
+
+      .card figcaption {
+        padding: 1rem;
+      }
+
+      .rotate-45 {
+        transform: rotate(45deg);
+      }
+
+      .rotate-135 {
+        transform: rotate(135deg);
+      }
+
+      .opacity-80 {
+        opacity: 0.8;
+      }
+
+      .sepia {
+        filter: sepia(1);
+      }
+
+      .eventos-flujo div {
+        padding: 4rem;
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .uno{
+        background-color: #f7df1e;
+      }
+      .dos{
+        background-color: aqua;
+      }
+      .tres{
+        background-color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScrip</h1>
+
+    <h2>manejo del DOM</h2>
+    <p id="que-es">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam quasi
+      sit natus error vel. Hic repudiandae, itaque, nulla veritatis cupiditate
+      iure modi cumque blanditiis, facere aut quod dolores sequi ducimus!
+    </p>
+    <nav id="menu">
+      <ul>
+        <li><a href="#">seccion 1</a></li>
+        <li><a href="#">seccion 2</a></li>
+        <li><a href="#">seccion 3</a></li>
+        <li><a href="#">seccion 4</a></li>
+        <li><a href="#">seccion 5</a></li>
+      </ul>
+    </nav>
+    <input type="text" name="nombre" placeholder="nombre" />
+    <a
+      class="link-dom"
+      href="index.html"
+      data-description="Document Object Model"
+      style="background-color: #222; color: gold"
+      >DOM</a
+    >
+    <section class="cards">
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/tech" alt="tech" />
+        <figcaption>Tech</figcaption>
+    </figure>
+    
+    <figure class="card">
+        <img src="https://placeimg.com/200/200/animals" alt="animals" />
+        <figcaption>Animals</figcaption>
+    </figure>
+    
+    <figure class="card">
+        <img src="https://placeimg.com/200/200/people" alt="people" />
+        <figcaption>People</figcaption>
+    </figure>
+    
+    <figure class="card">
+        <img src="https://placeimg.com/200/200/arch" alt="arch" />
+        <figcaption>Arch</figcaption>
+    </figure>
+    
+    <figure class="card">
+        <img src="https://placeimg.com/200/200/nature" alt="nature" />
+        <figcaption>Nature</figcaption>
+    </figure>
+  </section>
+  <template id="tem">
+      <figure class="card">
+          <img >
+          <figcaption></figcaption>
+      </figure>
+  </template>
+  <h3>Eventos en JavaScrip</h3>
+  <h4>Manejadores de Eventos</h4>
+  <button onclick="holaMundo()">Evento con atributo HTML </button> <!-- esto esta mal visto -->
+  <br>
+  <br>
+  <button id="evento-semantico">evento con manejador semantico</button>
+  <br>
+  <br>
+  <button id="evento-multiple">evento con manejador multiple</button>
+  <br>
+  <br>
+  <button id="evento-remover">remover evento</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="eventos-flujo">
+    <div class="uno">
+      1
+      <div class="dos">
+        2
+        <div class="tres">
+          3
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+    <script src="/js/dom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "cadena": "neider",
+  "numero": 18,
+  "boleano": true,
+  "arreglo": [1, 2, 3],
+  "objeto": { "email": "lpzneider@gmail.com" }
+}
